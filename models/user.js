@@ -20,19 +20,21 @@ const UserSchema = mongoose.Schema({
   }
 });
 
-//we can use the User var outside 
+//exporting the User variable
 const User = module.exports = mongoose.model('User', UserSchema);
 
-//get user by their Id
+//exporting the getUserById function
 module.exports.getUserById = function(id, callback){
   User.findById(id, callback);
 }
 
+//exporting the getUserByUsername function
 module.exports.getUserByUsername = function(username, callback){
   const query = {username: username}
   User.findOne(query, callback);
 }
 
+//changing the password to hash
 module.exports.addUser = function(newUser, callback){
   bcrypt.genSalt(10, (err, salt) => {
     bcrypt.hash(newUser.password, salt, (err, hash) => {
