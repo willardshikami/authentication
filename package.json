@@ -8,7 +8,6 @@
     "start": "node app",
     "nodemon": "app.js"
   },
-
   "dependencies": {
     "express": "*",
     "mongoose": "*",
@@ -17,9 +16,8 @@
     "jsonwebtoken": "*",
     "body-parser": "*",
     "passport": "*",
-    "passport-jwt":"*"
+    "passport-jwt": "*"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/willardshikami/authentication.git"
@@ -29,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/willardshikami/authentication/issues"
   },
-  "homepage": "https://github.com/willardshikami/authentication#readme"
+  "homepage": "https://github.com/willardshikami/authentication#readme",
+  "devDependencies": {}
 }
